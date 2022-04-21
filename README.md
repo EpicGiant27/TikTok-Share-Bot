@@ -6,5 +6,5 @@ TikTok Sharebot, enter any amount, enjoy.
   * pip install requests pystyle
 ```
 
-##  Credits:
- <br>Discord: moxy#9133
+##  Socials:
+>Discord: moxy#9133
