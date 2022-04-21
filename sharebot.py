@@ -68,10 +68,10 @@ def SendView(item_id):
                 impr_id = req.json()["log_pb"]["impr_id"]
                 TotalSendedShare += 1
                 if DebugMode == True:
-                    print(Colorate.Horizontal(Colors.green_to_white, f"Sent: {TotalSendedShare} ({impr_id})"))
+                    print(Colorate.Horizontal(Colors.red_to_white, f"Sent: {TotalSendedShare} | moxy#9133"))
                 else:
-                    print(Colorate.Horizontal(Colors.green_to_white, f"Sent: {TotalSendedShare} ({impr_id})"))
-                    Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedShare} / Fail :{TotalFailedReq}")
+                    print(Colorate.Horizontal(Colors.red_to_white, f"Sent: {TotalSendedShare} | moxy#9133"))
+                    Title(f"total shares sent :{TotalSendedShare}")
             else:
                 pass
         except:
@@ -89,12 +89,13 @@ def ClearURI(link):
 if (__name__ == "__main__"):
     Clear()
     print(Colorate.Horizontal(Colors.red_to_white, f"Discord: moxy#9133"))
-    itemID       = Write.Input("Insert your video URL -> ", Colors.red_to_purple, interval=0.0001)
-    amount       = Write.Input("Amount of shares [0 to any number] -> ", Colors.red_to_purple, interval=0.0001)
-    NThread      = Write.Input("Thread amount [100-1000] -> ", Colors.red_to_purple, interval=0.0001)
+    print(Colorate.Horizontal(Colors.red_to_white, f"The program will close itself after it's progress."))
+    itemID       = Write.Input("Insert your video URL -> ", Colors.red_to_white, interval=0.01)
+    amount       = Write.Input("Amount of shares [0 to any number] -> ", Colors.red_to_white, interval=0.01)
+    NThread      = Write.Input("Thread amount [100-1000] -> ", Colors.red_to_white, interval=0.01)
     
     if Title("viewbot by moxy#9133 - legend") == True:
-        Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_purple, interval=0.0001)
+        Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_white, interval=0.0001)
         if Debug.lower().startswith("y"):
             DebugMode = True
         else:
